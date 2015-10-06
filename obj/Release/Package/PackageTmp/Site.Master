@@ -1,0 +1,165 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="linx_tablets.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    
+    <meta charset="utf-8" />
+    <title><%: Page.Title %></title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+        <%: Scripts.Render("~/bundles/SiteJs") %>
+    </asp:PlaceHolder>
+
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+
+    <script type="text/javascript">
+
+        // Add icon to the header 
+        $(document).scroll(function (e) {
+            var scrollTop = $(document).scrollTop();
+            if (scrollTop > 250) {
+                $('img.navlogo').css('visibility', 'visible');
+            }
+            else {
+                $('img.navlogo').css('visibility', 'hidden');
+            }
+        });
+
+    </script>
+
+    
+    <!-- Custom Fonts -->
+    <link href="/Content/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <link href="/css2/tables.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=a47a2987-226a-4fc8-9cb9-e172aed2fc74");
+
+        @font-face
+        {
+            font-family: "HelveticaNeueLt";
+            src: url("/fonts/e0781a75-0ecb-464e-b6e9-85780ddc0921.eot?#iefix");
+            src: url("/fonts/e0781a75-0ecb-464e-b6e9-85780ddc0921.eot?#iefix") format("eot"),url("/fonts/d7d2e6c6-fc3a-41a5-9b52-648e12e215b2.woff") format("woff"),url("/fonts/cb64744b-d0f7-4ef8-a790-b60d6e3e4f21.ttf") format("truetype"),url("/fonts/ccde919e-a712-41ef-b90f-9efc47661659.svg#ccde919e-a712-41ef-b90f-9efc47661659") format("svg");
+        }
+
+        @font-face
+        {
+            font-family: "HelveticaNeueMd";
+            src: url("/fonts/a747e1ea-ecdf-4f3d-ad47-3df9cfbee3cc.eot?#iefix");
+            src: url("/fonts/a747e1ea-ecdf-4f3d-ad47-3df9cfbee3cc.eot?#iefix") format("eot"),url("/fonts/07173950-fa69-4b65-9c71-0cf2ec00b51d.woff") format("woff"),url("/fonts/aac5a4b8-ffd3-4529-a098-21b91bc86f9a.ttf") format("truetype"),url("/fonts/2379b081-2371-47d9-8be9-4e39d7892ebf.svg#2379b081-2371-47d9-8be9-4e39d7892ebf") format("svg");
+        }
+    </style>
+
+   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+    
+</head>
+<body id="page-top" class="index">
+    
+    <form id="Form1" runat="server">
+       
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="jquery.ui.combined" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!-- Navigation -->
+
+        <nav class="navbar navbar-default navbar-blue navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                    <a class="navbar-logo" href="#page-top">
+                        <img src="/images/linx-white.png" alt="" class="img-responsive navlogo" /></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li id="Li1" class="page-scroll" runat="server">
+                            <asp:LoginView ID="logInViewCusServiceLogOut" runat="server">
+                                <AnonymousTemplate></AnonymousTemplate>
+                                <LoggedInTemplate>
+                            <asp:LoginStatus ID="logInStatus" runat="server" />
+                                    </LoggedInTemplate>
+                                    </asp:LoginView>
+                        </li>
+                        
+                        <%--<li class="page-scroll">
+                            <asp:LoginView ID="logInViewCusService" runat="server">
+                                <AnonymousTemplate></AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    <a href="#"  data-toggle="collapse" data-target="#sm">Customer service</a>
+                                    <div id="sm" class="sublinks collapse">
+                                        <a class="list-group-item small" href="/CustomerService/CreateKey.aspx">Create Key</a>
+                                        <a class="list-group-item small" href="/CustomerService/ManageKeys.aspx">Manage Keys</a>
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </li>--%>
+                    </ul>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+                </div>
+        </nav>
+        <div class="main-content">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center" id="support">
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col col-md-12">
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="scroll-top page-scroll visible-xs visible-sm"><a class="btn btn-primary" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+
+    </form>
+</body>
+</html>

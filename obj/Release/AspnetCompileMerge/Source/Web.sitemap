@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode roles="*">
+    <siteMapNode url="/CustomerService/CreateKey.aspx" title="Create Key"  description="Create Key" />
+    <siteMapNode url="/CustomerService/ManageKeys.aspx" title="Manage Keys"  description="Create Key" />
+    <siteMapNode url="/defaults.aspx#tablets" title="Tablets"  description="Tablets" />
+    <siteMapNode url="/defaults.aspx#windows" title="WHY WINDOWS 8?"  description="WHY WINDOWS 8?" />
+    <siteMapNode url="/defaults.aspx#office" title="WHY OFFICE 365?"  description="WHY OFFICE 365?" />
+    <siteMapNode url="/faq.aspx" title="FAQ"  description="FAQ" />
+    <siteMapNode url="/defaults.aspx#support" title="Support"  description="Support" />
+  </siteMapNode>
+</siteMap>

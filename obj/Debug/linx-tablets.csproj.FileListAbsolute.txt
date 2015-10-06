@@ -1,0 +1,7 @@
+C:\nexus 7\linx tablets\bin\linx-tablets.dll
+C:\nexus 7\linx tablets\bin\linx-tablets.pdb
+C:\nexus 7\linx tablets\bin\Microsoft.Web.Infrastructure.dll
+C:\nexus 7\linx tablets\bin\Microsoft.Web.Infrastructure.xml
+C:\nexus 7\linx tablets\obj\Debug\linx-tablets.dll
+C:\nexus 7\linx tablets\obj\Debug\linx-tablets.pdb
+C:\nexus 7\linx tablets\obj\Debug\linx-tablets.csprojResolveAssemblyReference.cache
